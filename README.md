@@ -1,23 +1,8 @@
 # NILM Project
 * Currently data only from single house (H1)
-* 'H1_AI_Dataset' - Preprocessd data
+* 'H1_AI_Dataset' - Used to store preprocessd data (after Preprocess_1 & Preprocess_2)
 
-* 'Preprocess_1' - Process data into correct units
-* 'Preprocess_2' - Process data into format for AI models (windowing/sequencing)
-* 'Visual_Inspection' - Graph plotting to inspect distributions
-
-
-* MLP BASE - very basic model
-* MLP 1 - Includes train/test split & prints output,target randomly in test set
-* MLP2 - ReLU & 1 hidden layer:
-* MLP3 - LeakyReLU,  He initialisaiton, Layer normalisaiton & 1 hidden layer
-* MLP Inspect - variance inspection
-  * Plotting variance of forward and back signals using PyTorch hooks
-
-* LSTM1 - very basic model (NOT FOCUSED ON)
-
-
-
+* Currently working on 'MLP_Inspection' to get a better insight on how to improve models
 
 ## Dataset
 * Data sourced from UK-DALE dataset
@@ -77,14 +62,22 @@
 5. Concatenate all Appliance Groups: one dataframe for sum, and one for count
 
 
+## AI Model
+### MLP_0
+* Very basic model
+* No test/training split
+* Initially used to get a feel for data
+* Now used as simple base/reference
 
+### MLP_Print
+* When training, the last epoch will print out some random (output,targets) in test set
+* Used to understand how models are working
 
+### MLP_Inspect
+* Plotting variance of forward and back signals using PyTorch hooks
 
+### MLP_1
+* ReLU & 1 hidden layer
 
-
-
-
-
-
-
-
+### MLP_2
+* LeakyReLU, He initialisaiton, Layer normalisaiton & 1 hidden layer
