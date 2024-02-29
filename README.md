@@ -1,4 +1,6 @@
 # NILM Project
+* This project is only for learning purpose
+* Model development/training is in early stages
 * Currently data only from single house (H1)
 * 'H1_AI_Dataset' - Used to store preprocessd data (after Preprocess_1 & Preprocess_2)
 
